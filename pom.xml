@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>org.bycompany</groupId>
-    <artifactId>HolaSpringIJ</artifactId>
+    <artifactId>HolaMundoThymeleaf</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>HolaSpringIJ</name>
     <description>HolaSpringIJ</description>
