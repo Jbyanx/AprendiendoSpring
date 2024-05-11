@@ -5,13 +5,31 @@
     <title>Inicio</title>
 </head>
 <body>
-    <h1>Inicio</h1>
-    <p th:text="${mensaje}"></p>
-    <p th:text="${saludo}"></p>
-    <br>
-    Nombre: <span th:text="${persona.nombre}">mostrar nombre</span> <br>
-    Apellido: <span th:text="${persona.apellido}">mostrar apellido</span> <br>
-    Email: <span th:text="${persona.email}">mostrar email</span> <br>
-    Telefono: <span th:text="${persona.telefono}">mostrar telefono</span> <br>
+    <h1>Listado de Personas</h1>
+
+
+    <div th:if="${personas != null and !personas.isEmpty()}">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Email</th>
+                    <th>Telefono</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="persona : ${personas}">
+                    <td th:text="${persona.nombre}">mostrar nombre</td>
+                    <td th:text="${persona.apellido}">mostrar apellido</td>
+                    <td th:text="${persona.email}">mostrar email</td>
+                    <td th:text="${persona.telefono}">mostrar telefono</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div th:if="${personas == null or personas.isEmpty()}">
+        <p>La lista de personas esta vacia</p>
+    </div>
 </body>
 </html>
