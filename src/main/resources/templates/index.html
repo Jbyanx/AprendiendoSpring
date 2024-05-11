@@ -5,31 +5,31 @@
     <title>Inicio</title>
 </head>
 <body>
-    <h1>Listado de Personas</h1>
+<h1>Listado de Personas</h1>
 
 
-    <div th:if="${personas != null and !personas.isEmpty()}">
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>Nombre</th>
-                    <th>Apellido</th>
-                    <th>Email</th>
-                    <th>Telefono</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr th:each="persona : ${personas}">
-                    <td th:text="${persona.nombre}">mostrar nombre</td>
-                    <td th:text="${persona.apellido}">mostrar apellido</td>
-                    <td th:text="${persona.email}">mostrar email</td>
-                    <td th:text="${persona.telefono}">mostrar telefono</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <div th:if="${personas == null or personas.isEmpty()}">
-        <p>La lista de personas esta vacia</p>
-    </div>
+<div th:if="${personas != null and !personas.isEmpty()}">
+    <table border="1">
+        <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Email</th>
+            <th>Telefono</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="persona : ${personas}">
+            <td th:text="${persona.nombre}">mostrar nombre</td>
+            <td th:text="${persona.apellido}">mostrar apellido</td>
+            <td th:text="${persona.email}">mostrar email</td>
+            <td th:text="${persona.telefono}">mostrar telefono</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div th:if="${personas == null or personas.isEmpty()}">
+    <p>La lista de personas esta vacia</p>
+</div>
 </body>
 </html>
